@@ -1,0 +1,201 @@
+package model;
+
+import java.sql.Timestamp;
+import java.sql.Date;
+
+/**
+ * Represents a log of communications related to complaint investigations.
+ * It includes details such as the date and method of communication, the parties involved, and the content of the communication.
+ */
+public class CommunicationLogs {
+
+    /**
+     * The unique identifier of the communication log entry.
+     */
+    private int id;
+
+    /**
+     * The date on which the communication occurred.
+     */
+    private Date communicationDate;
+
+    /**
+     * The method through which the communication was conducted, such as email, phone, or in-person.
+     */
+    private String communicationMethod;
+
+    /**
+     * A detailed record of all parties involved in the communication.
+     */
+    private String partiesInvolved;
+
+    /**
+     * A summary or key points of what was discussed during the communication.
+     */
+    private String communicationContent;
+
+    /**
+     * The exact time the communication took place.
+     */
+    private Timestamp communicationTime;
+
+    /**
+     * The investigation details related to this communication log.
+     */
+    private InvestigationDetails fkInvestigationDetail;
+
+    /**
+     * The complaint associated with this communication log.
+     */
+    private Complaints fkComplaint;
+
+    // Constructors, Getters, and Setters
+
+    public CommunicationLogs() {
+        // Default constructor
+    }
+
+    /**
+     * Gets the unique identifier of the communication log.
+     *
+     * @return The unique identifier of the communication log.
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * Sets the unique identifier of the communication log.
+     *
+     * @param id The unique identifier of the communication log.
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    /**
+     * Gets the date of the communication.
+     * 
+     * @return The date of the communication.
+     */
+    public Date getCommunicationDate() {
+        return communicationDate;
+    }
+
+    /**
+     * Sets the date of the communication.
+     *
+     * @param communicationDate The date of the communication.
+     */
+    public void setCommunicationDate(Date communicationDate) {
+        this.communicationDate = communicationDate;
+    }
+
+    /**
+     * Gets the method of communication.
+     *
+     * @return The method of communication.
+     */
+    public String getCommunicationMethod() {
+        return communicationMethod;
+    }
+
+    /**
+     * Sets the method of communication.
+     *
+     * @param communicationMethod The method of communication.
+     */
+    public void setCommunicationMethod(String communicationMethod) {
+        this.communicationMethod = communicationMethod;
+    }
+
+    /**
+     * Gets the parties involved in the communication.
+     *
+     * @return The parties involved in the communication.
+     */
+    public String getPartiesInvolved() {
+        return partiesInvolved;
+    }
+
+    /**
+     * Sets the parties involved in the communication.
+     *
+     * @param partiesInvolved The parties involved in the communication.
+     */
+    public void setPartiesInvolved(String partiesInvolved) {
+        this.partiesInvolved = partiesInvolved;
+    }
+
+    /**
+     * Gets the content of the communication.
+     *
+     * @return The content of the communication.
+     */
+    public String getCommunicationContent() {
+        return communicationContent;
+    }
+
+    /**
+     * Sets the content of the communication.
+     *
+     * @param communicationContent The content of the communication.
+     */
+    public void setCommunicationContent(String communicationContent) {
+        this.communicationContent = communicationContent;
+    }
+
+    /**
+     * Gets the time of the communication.
+     *
+     * @return The time of the communication.
+     */
+    public Timestamp getCommunicationTime() {
+        return communicationTime;
+    }
+
+    /**
+     * Sets the time of the communication.
+     *
+     * @param communicationTime The time of the communication.
+     */
+    public void setCommunicationTime(Timestamp communicationTime) {
+        this.communicationTime = communicationTime;
+    }
+
+    /**
+     * Gets the related investigation detail of the communication.
+     *
+     * @return The related investigation detail.
+     */
+    public InvestigationDetails getFkInvestigationDetail() {
+        return fkInvestigationDetail;
+    }
+
+    /**
+     * Sets the related investigation detail of the communication.
+     *
+     * @param fkInvestigationDetail The related investigation detail.
+     */
+    public void setFkInvestigationDetail(InvestigationDetails fkInvestigationDetail) {
+        this.fkInvestigationDetail = fkInvestigationDetail;
+    }
+
+    /**
+     * Gets the associated complaint of the communication.
+     *
+     * @return The associated complaint.
+     */
+    public Complaints getFkComplaint() {
+        return fkComplaint;
+    }
+
+    /**
+     * Sets the associated complaint of the communication.
+     *
+     * @param fkComplaint The associated complaint.
+     */
+    public void setFkComplaint(Complaints fkComplaint) {
+        this.fkComplaint = fkComplaint;
+    }
+}
